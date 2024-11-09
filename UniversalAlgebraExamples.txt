@@ -1,0 +1,20 @@
+structure Group(G) {
+    operation multiply: G × G → G
+    operation inverse: G → G
+    constant identity: G
+
+    axioms {
+        ∀ a, b, c ∈ G:
+            multiply(a, multiply(b, c)) = multiply(multiply(a, b), c)
+        ∀ a ∈ G:
+            multiply(a, identity) = a
+        ∀ a ∈ G:
+            multiply(a, inverse(a)) = identity
+    }
+}
+
+structure IntegerAddition extends Group(Integer) {
+    operation multiply = (a, b) => a + b
+    operation inverse = a => -a
+    constant identity = 0
+}
