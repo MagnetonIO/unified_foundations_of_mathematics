@@ -90,12 +90,25 @@ where \( \phi_q \) and \( \psi_p \) are continuous functions.
 
 \textbf{Proof:} Using the Stone–Weierstrass theorem, \( f \) is approximated uniformly by a polynomial. The functions \( \phi_q \) and \( \psi_p \) are constructed explicitly, and their superposition captures the multivariate nature of \( f \).
 
+\section{Conclusion of the Proof}
+
+Combining the results from Parts 1 through 5, we can establish the following:
+
+\begin{itemize}
+    \item We have shown that all algebraic structures can be represented categorically, utilizing the framework of universal algebra and categorical logic (Lemma 1).
+    \item We have established a constructive foundation using homotopy type theory (HoTT), supported by the Brouwer–Heyting–Kolmogorov (BHK) interpretation (Lemma 2 and Lemma 4).
+    \item We have generalized the logical framework using topos theory, integrating internal logic and categorical reasoning (Lemma 3).
+    \item We have demonstrated that any multivariate continuous function can be expressed as a superposition of single-variable functions, applying the Kolmogorov–Arnold representation theorem (Lemma 5).
+\end{itemize}
+
+Thus, we conclude that any mathematical structure or statement expressible in the language of universal algebra, HoTT, or topos theory can be derived from our unified framework. This provides a coherent and comprehensive foundation for all of mathematics, bridging the gap between classical, constructive, and categorical perspectives.
+
 
 \section{Implementation and Examples}
 
 The following sections provide practical implementations of the unified framework.
 
-\section{Haskell Implementation}
+\subsection{Haskell Implementation}
 
 \lstset{
     language=Haskell,
@@ -129,7 +142,7 @@ instance Group Integer where
     inverse x = -x
 \end{lstlisting}
 
-\section{Abstract Universal Algebra Programming Language Example}
+\subsection{Abstract Universal Algebra Programming Language Example}
 
 \lstset{
     basicstyle=\ttfamily\small,
@@ -157,19 +170,6 @@ structure Group(G) {
     }
 }
 \end{lstlisting}
-
-\section{Conclusion of the Proof}
-
-Combining the results from Parts 1 through 5, we can establish the following:
-
-\begin{itemize}
-    \item We have shown that all algebraic structures can be represented categorically, utilizing the framework of universal algebra and categorical logic (Lemma 1).
-    \item We have established a constructive foundation using homotopy type theory (HoTT), supported by the Brouwer–Heyting–Kolmogorov (BHK) interpretation (Lemma 2 and Lemma 4).
-    \item We have generalized the logical framework using topos theory, integrating internal logic and categorical reasoning (Lemma 3).
-    \item We have demonstrated that any multivariate continuous function can be expressed as a superposition of single-variable functions, applying the Kolmogorov–Arnold representation theorem (Lemma 5).
-\end{itemize}
-
-Thus, we conclude that any mathematical structure or statement expressible in the language of universal algebra, HoTT, or topos theory can be derived from our unified framework. This provides a coherent and comprehensive foundation for all of mathematics, bridging the gap between classical, constructive, and categorical perspectives.
 
 \section{Conclusion}
 
