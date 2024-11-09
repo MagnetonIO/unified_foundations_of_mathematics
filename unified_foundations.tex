@@ -8,7 +8,7 @@
 \usepackage{xcolor}
 \usepackage{bookmark}
 \geometry{margin=1in}
-\title{A Unified Foundation of Mathematics: Integrating Universal Algebra, Homotopy Type Theory, and Topos Theory}
+\title{Towards a Unified Proof of the Foundations of Mathematics}
 \author{Matthew Long}
 \date{}
 
@@ -24,15 +24,48 @@ This paper presents a unified foundation of mathematics based on universal algeb
 
 \section{Introduction}
 
-The foundations of mathematics have evolved, driven by the need for greater abstraction and unification. We propose a new framework integrating:
+A unified proof for the foundations of mathematics seeks to establish a coherent, self-contained framework that subsumes various existing mathematical structures and logical systems. This proof aims to provide a logical and structural basis for all mathematical reasoning, bridging gaps between set theory, category theory, type theory, and universal algebra. In this context, we propose a unified foundational framework based on three core pillars:
 
 \begin{enumerate}
-    \item \textbf{Universal Algebra}: Abstracts algebraic structures using operations and identities.
-    \item \textbf{Homotopy Type Theory (HoTT)}: Incorporates homotopical concepts into type theory for constructive reasoning.
-    \item \textbf{Topos Theory}: Generalizes set theory, providing a categorical framework for logic.
+    \item \textbf{Universal Algebra and Categorical Logic}: This pillar generalizes algebraic structures and provides a framework for abstract reasoning across different mathematical domains. Universal algebra focuses on operations and identities, while categorical logic emphasizes morphisms and structural relationships.
+
+    \item \textbf{Homotopy Type Theory (HoTT)}: HoTT extends type theory by incorporating homotopy concepts, offering a constructive foundation. It introduces the notion of path types, where equalities are interpreted as paths, and it embraces higher-dimensional structures through the univalence axiom.
+
+    \item \textbf{Topos Theory}: Topos theory serves as a generalized setting for logic and geometry, unifying concepts from set theory, category theory, and topology. It provides a categorical universe with an internal logic that supports both classical and intuitionistic reasoning, extending the scope of mathematical structures.
+
 \end{enumerate}
 
+The unified proof synthesizes these components using two fundamental tools:
+
+\begin{itemize}
+    \item The \textbf{Brouwer–Heyting–Kolmogorov (BHK) interpretation}: Provides the constructive semantics for intuitionistic logic, interpreting logical connectives in terms of constructive proofs.
+    \item The \textbf{Kolmogorov–Arnold representation theorem}: Facilitates functional approximation by expressing any multivariate continuous function as a superposition of continuous functions of one variable, bridging algebraic and analytical perspectives.
+\end{itemize}
+
+In the following sections, we will outline the unified framework and provide the detailed proof structure that integrates these components, demonstrating the coherence and completeness of this new foundation for mathematics.
+
 We establish this framework using formal proofs and provide implementations in Haskell and a new abstract programming language.
+
+\section{Statement of the Unified Proof}
+
+We aim to prove that all mathematical structures and logical systems can be derived from a unified framework based on the following three components:
+
+\begin{itemize}
+    \item \textbf{Universal Algebra}: Provides the structural basis for operations and equations, abstracting algebraic structures through signatures and identities.
+    \item \textbf{Homotopy Type Theory (HoTT)}: Captures higher-dimensional reasoning and constructive logic, interpreting types as spaces and equalities as paths.
+    \item \textbf{Topos Theory}: Generalizes the universe of discourse and supports internal logical reasoning, integrating set-theoretic, categorical, and topological perspectives.
+\end{itemize}
+
+\subsection*{Theorem (Unified Foundations Theorem)}
+
+Let \( \mathcal{U} \) be a universe of mathematical discourse defined by a topos \( \mathcal{T} \), equipped with a type-theoretic structure \( \mathcal{H} \) (arising from Homotopy Type Theory), and an algebraic signature \( \Sigma \) (from universal algebra). Then, any mathematical statement expressible within \( \mathcal{U} \) can be derived using the following two fundamental tools:
+
+\begin{enumerate}
+    \item The \textbf{Brouwer–Heyting–Kolmogorov (BHK) interpretation} for constructive reasoning: Provides the constructive semantics of intuitionistic logic, where proofs are viewed as constructions.
+    \item The \textbf{Kolmogorov–Arnold representation theorem} for functional approximation: Ensures that any multivariate continuous function can be expressed as a superposition of single-variable functions, allowing algebraic and analytical reasoning.
+\end{enumerate}
+
+This theorem asserts that the combination of universal algebra, homotopy type theory, and topos theory forms a comprehensive framework capable of deriving all mathematical structures and logical systems, establishing a unified foundation for mathematics.
 
 \section{Universal Algebra and Categorical Logic}
 
