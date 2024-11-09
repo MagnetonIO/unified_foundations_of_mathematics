@@ -1,20 +1,34 @@
+-- Define the abstract algebraic structure for a group with three main components:
 structure Group(G) {
+    -- Binary operation 'multiply' takes two elements from G and returns another element from G.
     operation multiply: G × G → G
+    -- Unary operation 'inverse' returns the inverse of an element from G.
     operation inverse: G → G
+    -- The 'identity' is a constant element in G that acts as the identity for the group operation.
     constant identity: G
 
+    -- Axioms define the properties that must hold true for any group:
     axioms {
+        -- Associativity: The grouping of operations does not change the result.
         ∀ a, b, c ∈ G:
             multiply(a, multiply(b, c)) = multiply(multiply(a, b), c)
+
+        -- Identity element: Any element multiplied by the identity remains unchanged.
         ∀ a ∈ G:
             multiply(a, identity) = a
+
+        -- Inverse element: An element multiplied by its inverse results in the identity element.
         ∀ a ∈ G:
             multiply(a, inverse(a)) = identity
     }
 }
 
+-- Concrete implementation of the Group structure using the set of integers and addition.
 structure IntegerAddition extends Group(Integer) {
+    -- Define 'multiply' as integer addition.
     operation multiply = (a, b) => a + b
+    -- Define 'inverse' as the negation of an integer.
     operation inverse = a => -a
+    -- Define 'identity' as the integer 0.
     constant identity = 0
 }
